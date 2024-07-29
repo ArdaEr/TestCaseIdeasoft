@@ -14,7 +14,7 @@ Bu proje, MyIdeaSoft web sitesinde belirli test senaryolarını gerçekleştirme
 1. Bu projeyi klonlayın:
 
    ```sh
-   git clone https://github.com/kullaniciadi/testCaseMyIdeaSoft.git
+   git clone https://github.com/kullaniciadi/testCaseIdeaSoft.git
    cd testCaseIdeaSoft
 2. mvn clean install
 
