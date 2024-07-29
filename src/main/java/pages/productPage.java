@@ -23,17 +23,20 @@ public class productPage {
     }
 
     public void selectQuantity(int quantity) {
+        // Wait for the quantity drop-down to be visible and select the specified quantity
         WebElement quantityElement = wait.until(ExpectedConditions.visibilityOfElementLocated(quantityDropDown));
         Select quantitySelect = new Select(quantityElement);
         quantitySelect.selectByValue(String.valueOf(quantity));
     }
 
     public void addToCart() {
+        // Wait for the add-to-cart button to be clickable and click it
         WebElement addToCartElement = wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
         addToCartElement.click();
     }
 
     public boolean isConfirmationMessageDisplayed() {
+        // Wait for the confirmation message to be visible
         WebElement confirmationMessageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(confirmationMessage));
         return confirmationMessageElement.isDisplayed();
     }

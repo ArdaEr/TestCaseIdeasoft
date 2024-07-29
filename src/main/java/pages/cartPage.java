@@ -20,14 +20,15 @@ public class cartPage {
     }
 
     public boolean isCartTitleDisplayed() {
+        // Check if the cart title is displayed
         WebElement cartTitleElement = wait.until(ExpectedConditions.visibilityOfElementLocated(cartTitle));
         return cartTitleElement.isDisplayed();
     }
 
     public int getProductQuantity() {
+        // Retrieve the quantity of the product from the cart
         WebElement quantityElement = wait.until(ExpectedConditions.visibilityOfElementLocated(productQuantity));
         String quantityText = quantityElement.getAttribute("value");
         return Integer.parseInt(quantityText);
     }
 }
-

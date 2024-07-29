@@ -20,16 +20,19 @@ public class homePage {
     }
 
     public void open() {
+        // Navigate to the home page
         driver.get("https://testcase.myideasoft.com/");
     }
 
     public boolean isLogoDisplayed() {
+        // Check if the logo is displayed
         WebElement logoElement = wait.until(ExpectedConditions.visibilityOfElementLocated(logo));
         return logoElement.isDisplayed();
     }
 
     public void searchForProduct(String productName) {
+        // Enter the product name in the search box and press Enter
         WebElement searchBoxElement = wait.until(ExpectedConditions.visibilityOfElementLocated(searchBox));
-        searchBoxElement.sendKeys(productName + "\n");  // Simulates pressing Enter key after entering the search term
+        searchBoxElement.sendKeys(productName + "\n");
     }
 }

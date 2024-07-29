@@ -20,10 +20,12 @@ public class searchPage {
 
     public void selectFirstProduct() {
         try {
+            // Wait for the product element to be visible and scroll into view
             WebElement productElement = wait.until(ExpectedConditions.visibilityOfElementLocated(firstProduct));
-            System.out.println("Product found: " + productElement.getText());
+            // Click on the product element
             productElement.click();
         } catch (Exception e) {
+            // Print the exception message if the product is not found
             System.out.println("Product not found: " + e.getMessage());
             throw e;
         }
